@@ -1,0 +1,79 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	text-orientation: none;
+	list-style: none;
+}
+body{
+	font-family: 'Raleway', sans-serif;
+}
+.logo{
+	background: #fff;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.graficlogo{                           /*изображение изменяет свою висоту и ширину при маштабировании*/
+	margin: 0;
+	padding: 0cm;
+	padding: 0px;
+	max-width: 100%;
+	box-sizing: border-box; 
+	
+}
+
+nav{
+	margin: auto;
+	width: 800px;
+	height: 50px;
+}
+.topnav{
+	background-color: #fff;
+	font-size: 14px;
+	margin-top: 40px;
+}
+.topnav a{
+	color:#000;
+	text-align: center;
+	padding: 10px 6px;
+	font-size: 15px;
+}
+.topnav a:hover{								/*при наведении внизу чорная полоска */
+	border-bottom: 2px solid #000;
+}
+.topnav .icon{                          /*скрываем иконку &#9776; <-которую визвали*/
+	display: none;
+}
+@media screen and (max-width: 768px){      /*АДАПТИВНАЯ ВЕРСТКА будет определено екранами меньше 768п*/
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+	.topnav a.icon{
+		float: right;
+		margin-top: -17px;
+		display: block;
+		color: black;
+	}
+	nav{
+		width: 100%;
+		height: 100px;
+	}
+	.topnav.responsive{
+		position: relative;
+	}
+	.topnav.responsive a.icon{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav.responsive a{			/*ссылки*/
+		float: none;		/*чтоб определялись в колонку*/
+		display: block;
+		text-align: left;
+	}  
+}     
